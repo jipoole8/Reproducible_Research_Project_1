@@ -60,11 +60,11 @@ hist(dailySteps, xlab = "Steps", main = "Total Steps Per Day")
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 
 ```r
-Mean <- round(mean(activityData$steps, na.rm = TRUE), 2)
-Median <- (median(activityData$steps, na.rm=TRUE))
+Mean <- round(mean(dailySteps, na.rm = TRUE), 2)
+Median <- (median(dailySteps, na.rm=TRUE))
 ```
-The Mean is 37.38. <br />
-The Median is 0.
+The Mean is 1.076619\times 10^{4}. <br />
+The Median is 10765.
 
 ***
 ### What is the average daily activity pattern?
@@ -119,11 +119,11 @@ hist(dailyStepsImp, xlab = "Steps", main = "Total Steps Per Day(Imputed data)")
 
 
 ```r
-MeanImp <- round(mean(actDataImp$steps), 2)
-MedianImp <- (median(actDataImp$steps))
+MeanImp <- round(mean(dailyStepsImp), 2)
+MedianImp <- (median(dailyStepsImp))
 ```
-The Mean is 37.38. <br />
-The Median is 0.
+The Mean is 1.076619\times 10^{4}. <br />
+The Median is 1.0766189\times 10^{4}.
 
 ***
 ### Are there differences in activity patterns between weekdays and weekends?

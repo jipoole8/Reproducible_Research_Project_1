@@ -1,6 +1,8 @@
 ---
 title: "Reproducible Research Project 1"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
 ---
 ***
 ### Loading and preprocessing the data
@@ -28,8 +30,8 @@ hist(dailySteps, xlab = "Steps", main = "Total Steps Per Day")
 
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 ```{r mean & median of total daily steps}
-Mean <- round(mean(activityData$steps, na.rm = TRUE), 2)
-Median <- (median(activityData$steps, na.rm=TRUE))
+Mean <- round(mean(dailySteps, na.rm = TRUE), 2)
+Median <- (median(dailySteps, na.rm=TRUE))
 ```
 The Mean is `r Mean`. <br />
 The Median is `r Median`.
@@ -77,8 +79,8 @@ hist(dailyStepsImp, xlab = "Steps", main = "Total Steps Per Day(Imputed data)")
 ```
 
 ```{r mean & median of total daily steps imputed}
-MeanImp <- round(mean(actDataImp$steps), 2)
-MedianImp <- (median(actDataImp$steps))
+MeanImp <- round(mean(dailyStepsImp), 2)
+MedianImp <- (median(dailyStepsImp))
 ```
 The Mean is `r MeanImp`. <br />
 The Median is `r MedianImp`.
